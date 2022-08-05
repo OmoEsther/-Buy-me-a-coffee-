@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.cover {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,
+    #35D07F 0%, #2aa666 47.7%, #207d4c 92.3% );
+    border-radius: .5em;
+  }
+  .vh-80 {
+    height: 80vh!important;
+  }
+  
+.coffee-card{
+  background-color: #2a3b52c9;
+  padding: 1rem 4rem 1rem 1rem;
+  position: relative;
+  box-shadow: 1px 2px 6px #00000013;
+  transition: .1s;
+  cursor: pointer;
+}
+.coffee-card:hover{
+  box-shadow: 1px 2px 6px #02132c31;
+}
+.fancy-line{
+  background-color: #0066ff8a;
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+input, textarea{
+  color: #fff !important;
+}
+
+.App{
+  position: relative;
+}
+
+.side-coffee{
+  position: fixed;
+  bottom: 10%;
+  right: 5rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.side-coffee img{
+  width: 100%;
+  height: 100%;
+}
+
+.buy-me{
+  font-family: 'Shadows Into Light', cursive;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+}
+
+@media (max-width: 700px) {
+  .side-coffee{
+    display: none;
+  }
+}
