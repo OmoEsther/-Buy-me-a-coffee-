@@ -1,9 +1,9 @@
 import React from "react"
 import { Box, Typography } from "@mui/material"
+import { convertTime } from "../../utils/time"
 
 export const CoffeeCard = ({ coffee }) => {
   const { id, giver, name, message, timestamp } = coffee
-  console.log(id, giver, name, message, timestamp)
   return (
     <>
       <Box
@@ -23,11 +23,8 @@ export const CoffeeCard = ({ coffee }) => {
           <Typography variant="string">Message: {message}</Typography>
         </div>
         <div>
-          <Typography variant="string">Giver: {giver}</Typography>
-        </div>
-        <div>
           <Typography variant="string">
-            TimeStamp: {timestamp?.toString()}
+            Date: {convertTime(timestamp)}
           </Typography>
         </div>
       </Box>

@@ -7,7 +7,7 @@ const Cover = ({ name, login, coverImg }) => {
     return (
       <div
         className="d-flex justify-content-center flex-column text-center"
-        style={{ background: "#141414", minHeight: "100vh" }}
+        style={{ background: "#424952", minHeight: "100vh" }}
       >
         <div className="mt-auto text-light mb-5">
           <div
