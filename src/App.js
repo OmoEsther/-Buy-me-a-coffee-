@@ -5,7 +5,7 @@ import { login, logout as destroy, accountBalance } from "./utils/near"
 import { Notification } from "./components/utils/Notifications"
 import Cover from "./components/utils/Cover"
 import Coffees from "./components/Coffee/Coffees"
-import coverImg from "./assets/img/coffee.jpg"
+import coverImg from "./assets/img/coffee.svg"
 import coffeeBarista from "./assets/img/coffeeBarista.svg"
 import "./App.css"
 
@@ -45,7 +45,7 @@ function App() {
         </Container>
       ) : (
         // connect Wallet
-        <Cover name="DApp" login={login} coverImg={coverImg} />
+        <Cover name="Buy Me A Coffee DApp" login={login} coverImg={coverImg} />
       )}
 
       <div className="side-coffee">

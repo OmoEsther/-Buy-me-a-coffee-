@@ -54,7 +54,6 @@ const Coffees = () => {
 
   useEffect(() => {
     getCoffees()
-    console.log(coffees)
   }, [getCoffees])
 
   return (

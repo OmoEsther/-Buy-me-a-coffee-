@@ -6,8 +6,8 @@ const Cover = ({ name, login, coverImg }) => {
   if ((name, login, coverImg)) {
     return (
       <div
-        className="d-flex justify-content-center flex-column text-center "
-        style={{ background: "#000", minHeight: "100vh" }}
+        className="d-flex justify-content-center flex-column text-center"
+        style={{ background: "#141414", minHeight: "100vh" }}
       >
         <div className="mt-auto text-light mb-5">
           <div
