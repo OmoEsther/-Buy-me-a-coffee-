@@ -1,3 +1,10 @@
+# Buy me a coffee Dapp
+
+A Mini Buymeacoffee dAPP Using Solidity, Celo Smart Contract, ReactJs, and tailwind CSS. It'll be a platform where anyone on the internet can learn a little about us and send us money to purchase coffee + a note, with the information being kept on the celo blockchain via an smart contract.
+
+I repurposed this DApp from my celo submission. I made a bit more changes to the UI to give it a bit of a spark, I trust you'll like it.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
