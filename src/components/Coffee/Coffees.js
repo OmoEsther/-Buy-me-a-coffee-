@@ -27,7 +27,7 @@ const Coffees = () => {
         arr.push(coffees)
         setCoffees(arr)
       } else {
-        setCoffees(coffees)
+        setCoffees(coffees.reverse())
       }
       setCoffeePrice(await getCoffeePrice())
     } catch (error) {
