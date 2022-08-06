@@ -1,8 +1,18 @@
-import { Coffee, set_beneficiary, get_beneficiary, set_coffee_price, get_coffee_price, add_coffee, get_coffee, total_coffees, STORAGE_COST } from "./model"
-import { ContractPromiseBatch, logging, context, u128 } from 'near-sdk-as';
+import {
+    add_coffee,
+    Coffee,
+    get_beneficiary,
+    get_coffee,
+    get_coffee_price,
+    set_beneficiary,
+    set_coffee_price,
+    STORAGE_COST,
+    total_coffees
+} from "./model"
+import {context, ContractPromiseBatch, logging, u128} from 'near-sdk-as';
 
 export function init(beneficiary: string, coffee_price: u128): void {
-    assert(context.predecessor == context.contractName, "Method new is private");
+    assert(context.predecessor == context.contractName, "Method is private");
     set_beneficiary(beneficiary);
     set_coffee_price(coffee_price);
 }
@@ -11,23 +21,22 @@ export function buyCoffee(coffee: Coffee): void {
     // check if amount attached is equal to the set fee
     const price = coffee_price();
     if (price.toString() != context.attachedDeposit.toString()) {
-        throw new Error("attached deposit should be equal to the pet's addoption fee")
+        throw new Error("attached deposit should be equal to the coffee price")
     }
+
+    // Send the money to the beneficiary
+    const beneficiary: string = get_beneficiary();
+    ContractPromiseBatch.create(beneficiary).transfer(u128.sub(price,STORAGE_COST));
 
     //Add coffee
     const coffee_number: i32 = add_coffee(Coffee.fromPayload(coffee));
 
     logging.log(`Thank you ${context.predecessor}! Coffee number: ${coffee_number}`)
-    // Send the money to the beneficiary
-    const beneficiary: string = get_beneficiary();
-    //@ts-ignore
-    ContractPromiseBatch.create(beneficiary).transfer(price - STORAGE_COST);
 }
 
-//Get adoption fee
+//Get coffee price
 export function coffee_price(): u128 {
-    const price: u128 = get_coffee_price();
-    return price;
+    return get_coffee_price();
 }
 
 // get a range of coffees

@@ -6,6 +6,7 @@ export class Coffee {
     giver: string;
     name: string;
     message: string;
+    amount: u128;
     timestamp: u64;
     public static fromPayload(payload: Coffee): Coffee { //static method that takses a payload and returns a new Product object
         const coffee = new Coffee();
@@ -14,6 +15,7 @@ export class Coffee {
         coffee.name = payload.name;
         coffee.message = payload.message;
         coffee.timestamp = context.blockTimestamp;
+        coffee.amount = get_coffee_price();
         return coffee;
     }
 }
