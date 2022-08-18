@@ -6,6 +6,27 @@ A Mini Buymeacoffee DApp Using Solidity, Celo Smart Contract, ReactJs, and tailw
 I repurposed this DApp from my celo submission. I made a bit more changes to the UI to give it a bit of a spark, I trust you'll like it.
 
 
+# Idea Behing Submission.
+Buy Me A Coffee is a popular website that creators, educators, entertainers, and all kinds of people use to create a landing page where anyone can send some amount of money as a thank you for their services.
+
+It's basically just a way of giving your audience an easy way to say thanks. It can be added to people's pages on their popular social media handles. 
+
+And also creators can avoid the inconveniences of establishing a full-fledged business in order to share and monetize their work.
+
+
+Here are some popular implementations of this DApp,
+- Twitter Tip jar- for allowing followers to be 
+![TwitterTipJar](./src/assets/img/Twitter-Tips.jpg)
+
+- Spotify Fan Support
+![Spotify Fan Support](./src/assets/img/spotify-fan-support.jpg)
+
+# Updates 
+Added better documentation on code to explain functions and their usages.
+Please Note: The only function that's being used is the buyCoffee function, other functions are just for updating the coffee parameters.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
