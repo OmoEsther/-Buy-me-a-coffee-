@@ -19,8 +19,7 @@ export class Coffee {
         return coffee;
     }
 }
-
-// Aprox. cost (u128 + string = 16b + 64b = 80b = 800000000000000000000yN)
+// Default = 0.001 NEAR
 export const STORAGE_COST: u128 = u128.from("1000000000000000000000")
 
 
