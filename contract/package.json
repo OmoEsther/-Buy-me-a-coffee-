@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Dacade Bounty Tutorial",
   "main": "index.js",
-  "repository": "https://github.com/JoE11-y/near-marketplace",
-  "author": "JoE11-y",
+  "repository": "https://github.com/OmoEsther/Buy-me-a-coffee-",
+  "author": "OmoEsther",
   "license": "MIT",
   "private": true,
   "devDependencies": {
@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "global": "^4.4.0",
-    "near-cli": "^3.4.0"
+    "near-cli": "^1.0.0"
   }
 }
